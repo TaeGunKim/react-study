@@ -4,6 +4,8 @@ const port = 5000
 const bodyParser = require('body-parser');
 const {User} = require('./models/User');
 
+const config = require('./config/key')
+
 //application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({extended:true}));
 
@@ -12,7 +14,7 @@ app.use(bodyParser.json());
 
 
 const mongoose = require('mongoose')
-mongoose.connect('mongodb+srv://kimtg:12345@boilerplate.rcxpe.mongodb.net/<dbname>?retryWrites=true&w=majority',{
+mongoose.connect(config.mongoURI,{
     useNewUrlParser:true, useUnifiedTopology:true, useCreateIndex: true, useFindAndModify: false
 }).then(() => console.log('MongoDb Connected.. ~'))
   .catch(err => console.log(err))
@@ -22,7 +24,7 @@ mongoose.connect('mongodb+srv://kimtg:12345@boilerplate.rcxpe.mongodb.net/<dbnam
 
 app.get('/',(req,res) => res.send('Hello kimtg!<br/>'+
 '안녕하세요 처음뵙겠습니다.'+
-'뭘 보시나요 ㅎㅎ;'
+'뭘 보시나요 ㅎㅎ;<br/>수정해볼까요???'
 ))
 
 app.post('/register',(req,res) => {
