@@ -85,3 +85,25 @@ proxy : 유저 <-> proxy Server <-> 인터넷
 
 12. Redux
 - state 관리 라이브러리 , store가 감싸고 있음.
+
+13. Redux up
+- redux, react-redux, redux-promise, redux-thunk 다운
+- npm install redux react-redux redux-promise redux-thunk --save
+- redux-promis, redux-thunk 는 미들웨어(redux 사용을 쉽게 해줌)
+redux 데이터 flow
+action -> reducer -> store -> [subscribe] -> react Component -> [dispatch(action)] -> action
+- action (plain object,객체여야함)
+- 근데 promise와 functions로 액션을 받게 될 수도 있기 때문에 해당 미들웨어를 설치
+
+14. React vs React Hook
+- class component 와 function component가 있는데, class는 기능을 더 많이 쓸수있지만 코드가 길고 성능이 좋지 않음
+- function은  제한되고, 짧지만 성능이 좋음
+- 최근 hook이 생겨서 function component로도 기능을 넣어서 쓸수가 있음
+
+15. 로그인 페이지 
+- formik, yup 라이브러리를 이용해서 다이나믹하게 만들수있음
+- 강의 완료한 뒤에 업그레이드 해보자.
+
+
+
+
