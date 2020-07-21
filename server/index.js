@@ -1,6 +1,5 @@
 const express = require('express')
 const app = express()
-const port = 5000
 const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
 const config = require('./config/key');
@@ -25,10 +24,11 @@ mongoose.connect(config.mongoURI,{
 
 
 
-app.get('/',(req,res) => res.send('Hello kimtg!<br/>'+
-'안녕하세요 처음뵙겠습니다.'+
-'뭘 보시나요 ㅎㅎ;<br/>수정해볼까요???'
-))
+app.get('/',(req,res) => res.send('Hello kimtg!<br/>TEst'))
+
+app.get('/api/hello', (req,res) => {
+  res.send("안녕하세요! /api/hello에서 드립니다!")
+})
 
 app.post('/api/users/register',(req,res) => {
   //회원가입 필요정보 client에서 가져와서
@@ -110,5 +110,5 @@ app.get('/api/users/logout', auth, (req,res) => {
 
 
 
-
+const port = 5000
 app.listen(port, () => console.log('Example app listening on port ${port}!'))

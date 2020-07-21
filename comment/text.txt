@@ -49,4 +49,39 @@ React JS
 - 만약 client/src에서 index.js 에서 <app /> 부분에 <div>hello world</div>로 입력하면 입력한 대로 화면이 바뀜
 
 5. CRA to Our Bolierplate
-- 
+- rfce 하면 create a reacet func.. 뜨면서 기본 뜨는데 난 안뜸..
+
+6. react router DOM
+
+7. data flow & axios
+
+8. CORS 이슈, proxy 설정
+- Cross-Origin resource Sharing, 보안을 위한 정책
+
+9. proxy server
+기존 : server (localhost:5000)   <- request, response -> client(localhost:3000)
+proxy : 유저 <-> proxy Server <-> 인터넷 
+- 아이피를 proxy 서버에서 임의로 바꿀 수 있다. 그래서 접근한느사람의 ip를 모름
+- 보내느 데이터도 임의로 바꿀수있음
+- 방화벽기능, 웹필터기능, 캐쉬데이터,공유데이터제공기능
+사용이유
+- 회사에서 직원들이나집안에서 아이들 인터넷 사용 제어
+- 캐쉬를 이용해 더 빠른 인터넷 제공
+- 더 나은 보안제공
+- 이용 제한된 사이트 접근 가능
+
+10.Concurrently 이용해서 front와 backend 서버 동시에 가동
+- root 폴더에서 npm install concurrently --save
+- root의 package.json 에서 "dev":"concurrently \"npm run backend\" \"npm run start --prefix client\""    
+- 폴더경로 기준으로 값을 줄땐
+"dev": "concurrently \"npm run start:dev\" \"cd ../client && npm run start\"",
+
+11.  Antd Css
+- css framework를 쓰는 이유 -> 기능만드는데 집중
+- 종류 for react js 
+- material Ui, react bootstarp, semantic ui, and design, materialize ...
+- 여기선 antdesin 사용 https://ant.design/
+- npm install antd
+
+12. Redux
+- state 관리 라이브러리 , store가 감싸고 있음.
