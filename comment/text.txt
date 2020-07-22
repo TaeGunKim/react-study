@@ -104,6 +104,16 @@ action -> reducer -> store -> [subscribe] -> react Component -> [dispatch(action
 - formik, yup 라이브러리를 이용해서 다이나믹하게 만들수있음
 - 강의 완료한 뒤에 업그레이드 해보자.
 
+16. 회원가입 페이지
+- redux 활용
 
+17. 로그아웃 페이지
 
+18. 인증체크
+- all user page : Landing page, About Page
+- only user page : Detail page
+- not user page : Register Page, Login Page
+- only admin page : Admin Page
+- 이외에도 댓글작성, 파일전송, 파일업로드 등.. 
+const EnhancedComponent = higherOrderComponent(WrappedComponent);
 
