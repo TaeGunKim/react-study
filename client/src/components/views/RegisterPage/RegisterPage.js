@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import {useDispatch} from 'react-redux';
 import {registerUser} from '../../../_actions/user_actions';
 import { withRouter } from 'react-router-dom';
+import { confirmAlert } from 'react-confirm-alert';
+import 'react-confirm-alert/src/react-confirm-alert.css';
 
 function RegisterPage(props) {
 
@@ -34,7 +36,19 @@ function RegisterPage(props) {
         */
 
         if(Password !== ConfirmPassword){
-            return alert('비밀번호와 비밀번호 확인은 같아야 합니다.')
+            confirmAlert({
+                title: '경고',   
+                message:'비밀번호와 비밀번호 확인은 같아야 합니다.',
+                buttons: [
+                {
+                    label: '확인',
+                    onClick: () => ''
+                }
+                ],
+                closeOnEscape: false,
+                closeOnClickOutside: false
+            }); 
+            return false;            
         }
 
 

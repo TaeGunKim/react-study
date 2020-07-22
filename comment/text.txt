@@ -117,3 +117,7 @@ action -> reducer -> store -> [subscribe] -> react Component -> [dispatch(action
 - 이외에도 댓글작성, 파일전송, 파일업로드 등.. 
 const EnhancedComponent = higherOrderComponent(WrappedComponent);
 
+
+
+강의 git https://github.com/jaewonhimnae/boiler-plate-ko
+내작업 git  https://github.com/TaeGunKim/react-study
