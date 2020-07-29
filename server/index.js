@@ -16,9 +16,12 @@ app.use(cookieParser());
 
 
 const mongoose = require('mongoose')
-mongoose.connect(config.mongoURI,{
-    useNewUrlParser:true, useUnifiedTopology:true, useCreateIndex: true, useFindAndModify: false
-}).then(() => console.log('MongoDb Connected.. ~'))
+const connect = mongoose.connect(config.mongoURI,
+  {
+    useNewUrlParser:true, useUnifiedTopology:true,
+    useCreateIndex: true, useFindAndModify: false
+  }
+).then(() => console.log('MongoDb Connected.. ~'))
   .catch(err => console.log(err))
 
 
